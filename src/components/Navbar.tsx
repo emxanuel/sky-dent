@@ -3,14 +3,15 @@ import NavbarMenu from './NavbarMenu'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { toggleShowElement } from '../functions/elements'
+import logo from '../assets/LOGO SKYDENTRD (1).webp'
 
 
 const Navbar = () => {
     return (
         <div>
-            <nav className="flex justify-between px-3 bg-blue-400 text-white py-5 w-screen items-center relative z-20 ">
+            <nav className="flex justify-between px-3 bgBlue text-white py-5 w-full items-center fixed z-20 md:shadow-lg shadow-current h-24 top-0">
                 <div className="flex items-center">
-                    <p>Logo</p>
+                    <img className='w-48 shadow-sm shadow-white' src={logo} alt=""/>
                 </div>
                 <ul className="hidden md:grid grid-cols-4 place-items-center text-sm lg:text-base">
                     <li className="duration-300 hover:scale-110 "><Link to="/">Inicio</Link></li>

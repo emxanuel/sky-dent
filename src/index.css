@@ -6,3 +6,11 @@
 *{
   font-family: 'Montserrat', sans-serif;
 }
+
+.bgBlue{
+  background-color: #0c4e9c;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
