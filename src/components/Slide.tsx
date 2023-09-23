@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 
 const Slide = () => {
     return (
-        <div>
+        <div className="relative z-0">
             <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
