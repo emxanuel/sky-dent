@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, } from "swiper/modules"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import img1 from '../assets/1.webp'
 import img2 from '../assets/2.webp'
 import img3 from '../assets/3.webp'
@@ -41,12 +41,12 @@ const Slide = () => {
     return (
         <div className="relative">
             <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}
-                pagination
+                pagination={{clickable: true, dynamicBullets: true}}
                 navigation
                 centeredSlides
-                autoplay={{ delay: 1 }}
+                autoplay={{delay: 1000}}
                 loop
                 className="w-full flex"
             >
