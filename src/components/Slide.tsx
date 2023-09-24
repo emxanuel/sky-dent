@@ -48,12 +48,12 @@ const Slide = () => {
                 centeredSlides
                 autoplay={{delay: 5000, disableOnInteraction: false}}
                 loop
-                className="w-full flex"
+                className="w-full"
             >
                 {images.map((i) => (
                     <SwiperSlide key={i.id}>
                         <div className="aspect-video w-full aspect-2/1">
-                            <img className="h-fit w-full" src={i.img} alt="slide image"/>
+                            <img className="w-full" src={i.img} alt="slide image"/>
                         </div>
                     </SwiperSlide>
                 ))}
