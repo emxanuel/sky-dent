@@ -1,4 +1,4 @@
-import type { Service } from "./types";
+import type { Service } from "../types";
 
 const services: Service[] = [
     {

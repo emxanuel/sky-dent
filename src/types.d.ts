@@ -4,4 +4,10 @@ interface Service {
     content: string[];
 }
 
-export type { Service };
+interface Office{
+    id: number,
+    location: string,
+    phone: string
+}
+
+export type { Service, Office };
