@@ -46,7 +46,7 @@ const Slide = () => {
                 pagination={{clickable: true, dynamicBullets: true}}
                 navigation
                 centeredSlides
-                autoplay={{delay: 1000}}
+                autoplay={{delay: 5000, disableOnInteraction: false}}
                 loop
                 className="w-full flex"
             >
