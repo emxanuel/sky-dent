@@ -18,10 +18,25 @@ const services: Service[] = [
     {
         id: 2,
         title: "Endodoncia",
-        content: [],
+        content: [
+            "Recubrimientos Pulpares",
+            "Pulpotomia",
+            "Obstrucciones Retro apicales",
+            "Cirugía Endodontica",
+        ],
     },
     {
         id: 3,
+        title: 'Emergencia',
+        content: [
+            'Drenaje de Absceso',
+            'Recubrimientos',
+            'Consulta de Emergencia',
+            'Reimplantacion'
+        ]
+    },
+    {
+        id: 4,
         title: "Operatoria",
         content: [
             "Obturaciones Amalgama",
@@ -31,7 +46,7 @@ const services: Service[] = [
         ],
     },
     {
-        id: 4,
+        id: 5,
         title: "Coronas y Puentes",
         content: [
             "Coronas de Porcelana",
@@ -51,7 +66,7 @@ const services: Service[] = [
         ],
     },
     {
-        id: 5,
+        id: 6,
         title: "Ortodoncia",
         content: [
             "Estudio Cefalometrico",
@@ -63,7 +78,7 @@ const services: Service[] = [
         ],
     },
     {
-        id: 6,
+        id: 7,
         title: "Cirugías",
         content: [
             "Exodoncia Simple",
@@ -82,7 +97,7 @@ const services: Service[] = [
         ],
     },
     {
-        id: 7,
+        id: 8,
         title: "Prevención",
         content: [
             "Profilaxis",
@@ -92,7 +107,7 @@ const services: Service[] = [
         ],
     },
     {
-        id: 8,
+        id: 9,
         title: "Periodoncia",
         content: [
             "Detartraje Profundo",
