@@ -13,14 +13,11 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <img className='w-32 lg:w-48' src={logo} alt=""/>
                 </div>
-                <ul className="hidden md:grid grid-cols-4 place-items-center text-sm lg:text-base">
+                <ul className="hidden md:flex gap-10 text-sm lg:text-lg">
                     <li className="duration-300 hover:scale-110 "><Link to="/">Inicio</Link></li>
                     <li className="duration-300 hover:scale-110 "><Link to="/quienes-somos">Quienes Somos</Link></li>
                     <li className="duration-300 hover:scale-110 "><Link to="/sucursales">Sucursales</Link></li>
-                    <li className="duration-300 hover:scale-110 "><Link to="/servicios">Servicios</Link></li>
-                    <li className="duration-300 hover:scale-110 "><Link to="/financiamientos">Financiamientos</Link></li>
-                    <li className="duration-300 hover:scale-110 "><Link to="/pagos-en-linea">Pagos en linea</Link></li>
-                    <li className="duration-300 hover:scale-110 "><Link to="/responsabilidad-social">Responsabilidad Social</Link></li>
+                    <li className="duration-300 hover:scale-110 "><Link to="/cita">Crea una Cita</Link></li>
                     <li className="duration-300 hover:scale-110 "><Link to="contacto">Contacto</Link></li>
                 </ul>
                 <button onClick={() => {

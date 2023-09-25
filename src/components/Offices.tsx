@@ -1,9 +1,13 @@
 import { offices } from "../data/offices"
 import pin from '../assets/location-pin.webp'
 
-const Offices = () => {
+interface Props{
+    gap?: string
+}
+
+const Offices: React.FC<Props> = ({gap}) => {
     return (
-        <div className="flex flex-col md:flex-row gap-10 md:gap-0 md:h-32 justify-evenly my-4 items-center">
+        <div className={`flex flex-col md:flex-row gap-10 md:gap-0 md:h-32 justify-evenly my-4 items-center ${gap? gap : ''}`}>
             {offices.map((o) => (
                 <div key={o.id} className="flex flex-col items-center">
                     <img className="select-none w-16" src={pin} alt="" />
