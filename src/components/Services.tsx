@@ -3,9 +3,9 @@ import icon from '../assets/icon.webp'
 
 const Services = () => {
     return (
-        <div className="bgBlue h-full py-14 text-white lg:p-24">
+        <div className="bgBlue h-full py-14 text-white md:p-24">
             <h2 className="text-center font-bold md:text-6xl pt-10 pb-20 text-4xl">Nuestros Servicios</h2>
-            <div className="flex flex-col items-center gap-10 md:grid md:grid-cols-2 md:gap-11 lg:grid-cols-3">
+            <div className="flex flex-col items-center gap-10 md:grid md:grid-cols-2 md:gap-11 lg:grid-cols-3 place-items-center">
                 {services.map(s => (
                     <div className={`flex flex-col items-center justify-start w-full gap-3 h-full`} key={s.id}>
                         <h3 className="font-bold text-2xl">{s.title}</h3>
