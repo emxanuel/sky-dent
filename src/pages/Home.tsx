@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div>
             <Slide />
+            <img className="w-full aspect-5/2" src={img1} alt="" />
             <Services />
             <Offices />
-            <img className="w-full aspect-5/2" src={img1} alt="" />
             <video src={video} autoPlay loop muted controls className="w-full" />
         </div>
     )
