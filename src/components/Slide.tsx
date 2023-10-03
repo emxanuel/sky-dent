@@ -39,7 +39,7 @@ const images = [
 
 const Slide = () => {
     return (
-        <div className="relative">
+        <div id="home" className="relative">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}

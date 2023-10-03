@@ -30,3 +30,7 @@
 .tinyText{
   font-size: 0.5rem;
 }
+
+html{
+  scroll-behavior: smooth;
+}
