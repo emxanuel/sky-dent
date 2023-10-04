@@ -4,9 +4,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { toggleShowElement } from '../functions/elements'
 import logo from '../assets/logo.svg'
+import { scrollElement } from '../functions/elements'
 
 
 const Navbar = () => {
+
     return (
         <div>
             <nav className="flex justify-between px-3 bgBlue text-white py-5 w-full items-center fixed z-20 md:shadow-lg shadow-current h-24 top-0">
@@ -14,11 +16,11 @@ const Navbar = () => {
                     <img className='w-32 lg:w-48' src={logo} alt=""/>
                 </div>
                 <ul className="hidden md:flex gap-10 text-sm lg:text-lg">
-                    <li className="duration-300 hover:scale-110 "><a href="#home">Inicio</a></li>
-                    <li className="duration-300 hover:scale-110 "><a href='#about'>Quienes Somos</a></li>
-                    <li className="duration-300 hover:scale-110 "><a href="#offices">Sucursales</a></li>
+                    <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('home')}>Inicio</button></li>
+                    <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about')}>Quienes Somos</button></li>
+                    <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('offices')}>Sucursales</button></li>
                     <li className="duration-300 hover:scale-110 "><Link to="/cita">Crea una Cita</Link></li>
-                    <li className="duration-300 hover:scale-110 "><Link to="contacto">Contacto</Link></li>
+                    <li className="duration-300 hover:scale-110 "><Link to="/contacto">Contacto</Link></li>
                 </ul>
                 <button onClick={() => {
                     const element = document.getElementById('menu') as HTMLElement
