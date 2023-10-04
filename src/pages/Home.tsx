@@ -3,12 +3,13 @@ import img1 from '../assets/CINTILLO (1).webp'
 import video from '../assets/VIDEO.mp4'
 import Offices from "../components/Offices"
 import Services from "../components/Services"
+import Videos from "../components/Videos"
 
 const Home = () => {
     return (
         <div>
             <Slide />
-            <div id="about" className="flex flex-col py-10 px-20 md:px-48 gap-10">
+            <div id="about" className="flex flex-col py-10 px-20 md:px-48 gap-10 bgBlue text-white">
                 <h2 className="font-bold text-5xl text-center" >Quienes Somos</h2>
                 <p className="text-lg">
                     Somos un centro odontológico con más de 25 años
@@ -31,6 +32,7 @@ const Home = () => {
             <Services />
             <Offices />
             <video src={video} autoPlay loop muted controls className="w-full" />
+            <Videos />
         </div>
     )
 }
