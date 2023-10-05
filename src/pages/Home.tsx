@@ -9,8 +9,8 @@ const Home = () => {
     return (
         <div>
             <Slide />
-            <div id="about" className="flex flex-col py-10 px-20 md:px-48 gap-10 textBlue text-justify">
-                <h2 className="font-bold text-2xl md:text-5xl text-cente" >Quienes Somos</h2>
+            <div id="about" className="flex flex-col py-10 px-16 md:px-48 gap-10 textBlue text-justify">
+                <h2 className="font-bold text-2xl md:text-5xl text-center" >Quienes Somos</h2>
                 <p className="text-lg">
                     Somos un centro odontológico con más de 25 años
                     de experiencia brindando una alta calidad en cada
