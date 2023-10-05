@@ -24,7 +24,7 @@ const videos = [
 
 const Videos = () => {
     return (
-        <div className='grid grid-cols-4'>
+        <div className='flex flex-col md:grid md:grid-cols-4'>
             {videos.map((v) => (
                 <video className='' controls key={v.id} src={v.path}></video>
             ))}
