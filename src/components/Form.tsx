@@ -1,7 +1,7 @@
 
 const Form = () => {
     return (
-        <form className="relative py-10 md:mx-20 lg:mx-40 px-4 md:px-10 border rounded-md">
+        <form className="relative py-10 md:mx-20 lg:mx-40 px-4 md:px-10 border rounded-md flex flex-col">
             <div className="flex flex-col">
                 <label htmlFor="" className="font-bold border-b">Datos del paciente</label>
                 <div className="flex flex-col py-4">
@@ -257,12 +257,11 @@ const Form = () => {
                     </div>
                     <div className="flex flex-col py-4">
                         <label htmlFor="" className="font-bold">Nota</label>
-                        <select name="" id="" className="border p-2">
-                            <option value="">Seleccionar</option>
-                        </select>
+                        <textarea name="" id="" className="border h-96 p-2 resize-none" placeholder="Comentario sobre la cita"></textarea>
                     </div>
                 </div>
             </div>
+            <button className="bgBlue text-white p-3 rounded-md right-0">Enviar</button>
         </form>
     )
 }
