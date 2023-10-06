@@ -1,8 +1,11 @@
+import Form from "../components/Form"
 
 
 const Appointment = () => {
     return (
-        <div></div>
+        <div>
+            <Form />
+        </div>
     )
 }
 
