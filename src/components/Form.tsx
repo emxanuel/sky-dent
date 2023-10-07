@@ -105,15 +105,15 @@ const Form = () => {
                         <label htmlFor="" className="font-bold">Tipo de paciente</label>
                         <div className="flex gap-2 md:gap-10 md:flex-row flex-col">
                             <div className="flex items-center gap-2">
-                                <input onChange={handleInputChange} type="radio" name="patientType" id="" />
+                                <input onChange={handleInputChange} type="radio" name="patientType" value={'Personal'}/>
                                 <label htmlFor="">Personal</label>
                             </div>
                             <div className="flex items-center gap-2">
-                                <input onChange={handleInputChange} type="radio" name="patientType" id="" />
+                                <input onChange={handleInputChange} type="radio" name="patientType" value={'Dependiente menor de edad'}/>
                                 <label htmlFor="">Dependiente menor de edad</label>
                             </div>
                             <div className="flex items-center gap-2">
-                                <input onChange={handleInputChange} type="radio" name="patientType" id="" />
+                                <input onChange={handleInputChange} type="radio" name="patientType" value={'Extranjero'}/>
                                 <label htmlFor="">Extranjero</label>
                             </div>
                         </div>
@@ -122,11 +122,11 @@ const Form = () => {
                         <label htmlFor="" className="font-bold">Tipo de cita</label>
                         <div className="flex gap-10">
                             <div className="flex gap-2">
-                                <input onChange={handleInputChange} type="radio" name="appointmentType" id="" />
+                                <input onChange={handleInputChange} type="radio" name="appointmentType" value={'Consulta inicial'} />
                                 <label htmlFor="">Consulta inicial</label>
                             </div>
                             <div className="flex gap-2">
-                                <input onChange={handleInputChange} type="radio" name="appointmentType" id="" />
+                                <input onChange={handleInputChange} type="radio" name="appointmentType" value={'Profilaxis'} />
                                 <label htmlFor="">Profilaxis</label>
                             </div>
                         </div>
@@ -150,7 +150,7 @@ const Form = () => {
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Fecha Nacimiento" name="birthDate"/>
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="E-mail" name="email"/>
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Telefono" name="phone"/>
-                        <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Celular" name="cellphone"/>
+                        <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Celular" name="cellPhone"/>
                         <select className="border p-2" name="ars">
                             <option value="">Seleccionar ARS</option>
                         </select>
@@ -259,23 +259,23 @@ const Form = () => {
                     <label htmlFor="" className="font-bold">Cuando fue la ultima vez que fue al dentista</label>
                     <div className="flex flex-col">
                         <div className="flex gap-2">
-                            <input onChange={handleInputChange} type="checkbox" name="lastTime" value={'Nunca'} />
+                            <input onChange={handleInputChange} type="radio" name="lastTime" value={'Nunca'} />
                             <label htmlFor="">Nunca</label>
                         </div>
                         <div className="flex gap-2">
-                            <input onChange={handleInputChange} type="checkbox" name="lastTime" value={'0 - 6 meses'} />
+                            <input onChange={handleInputChange} type="radio" name="lastTime" value={'0 - 6 meses'} />
                             <label htmlFor="">0 - 6 meses</label>
                         </div>
                         <div className="flex gap-2">
-                            <input onChange={handleInputChange} type="checkbox" name="lastTime" value={'6 meses - 1 año'} />
+                            <input onChange={handleInputChange} type="radio" name="lastTime" value={'6 meses - 1 año'} />
                             <label htmlFor="">6 meses - 1 año</label>
                         </div>
                         <div className="flex gap-2">
-                            <input onChange={handleInputChange} type="checkbox" name="lastTime" value={'1 - 3 años'} />
+                            <input onChange={handleInputChange} type="radio" name="lastTime" value={'1 - 3 años'} />
                             <label htmlFor="">1 - 3 años</label>
                         </div>
                         <div className="flex gap-2">
-                            <input onChange={handleInputChange} type="checkbox" name="lastTime" value={'Mas de 3 años'} />
+                            <input onChange={handleInputChange} type="radio" name="lastTime" value={'Mas de 3 años'} />
                             <label htmlFor="">Mas de 3 años</label>
                         </div>
                     </div>
@@ -353,7 +353,7 @@ const Form = () => {
                     </div>
                     <div className="flex flex-col py-4">
                         <label htmlFor="" className="font-bold">Nota</label>
-                        <textarea name="note" id="" className="border h-96 p-2 resize-none" placeholder="Comentario sobre la cita"></textarea>
+                        <textarea onChange={handleInputChange} name="note" id="" className="border h-96 p-2 resize-none" placeholder="Comentario sobre la cita"></textarea>
                     </div>
                 </div>
             </div>
