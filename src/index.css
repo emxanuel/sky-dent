@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: century-gothic, sans-serif ;
 }
 
 .bgBlue{
@@ -33,4 +32,8 @@
 
 html{
   scroll-behavior: smooth;
+}
+
+.aspect-16\/2{
+  aspect-ratio: 16/2;
 }

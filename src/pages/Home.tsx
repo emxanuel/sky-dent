@@ -1,5 +1,5 @@
 import Slide from "../components/Slide"
-import img1 from '../assets/CINTILLO (1).webp'
+import img1 from '../assets/SKYCASH.webp'
 import video from '../assets/VIDEO.mp4'
 import Offices from "../components/Offices"
 import Services from "../components/Services"
@@ -28,7 +28,7 @@ const Home = () => {
                     entrega disponemos cada día.
                 </p>
             </div>
-            <img className="w-full aspect-5/2" src={img1} alt="" />
+            <img className="w-full aspect-16/2" src={img1} alt="" />
             <Services />
             <Offices />
             <video src={video} autoPlay loop muted controls className="w-full" />

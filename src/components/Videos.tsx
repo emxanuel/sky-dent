@@ -51,9 +51,9 @@ const Videos = () => {
             <div className='flex flex-col md:grid md:grid-cols-4'>
                 {videos.map((v) => (
                     <div className='' key={v.id}>
+                        <video className='' controls src={v.path} />
                         <h3 className='font-bold text-center py-4'>{v.title}</h3>
-                        <p className='px-5 text-justify md:py-4 pb-5 md:pb-0 md:h-80'>{v.text}</p>
-                        <video className='' controls src={v.path} />    
+                        <p className='px-5 text-justify md:py-4 pb-5 md:pb-0'>{v.text}</p>
                     </div>
                 ))}
             </div>
