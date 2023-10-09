@@ -151,10 +151,6 @@ const Form = () => {
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="E-mail" name="email"/>
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Telefono" name="phone"/>
                         <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Celular" name="cellPhone"/>
-                        <select className="border p-2" name="ars">
-                            <option value="">Seleccionar ARS</option>
-                        </select>
-                        <input onChange={handleInputChange} className="border p-2" type="text" placeholder="Numero Afiliado" name="affiliateNumber"/>
                     </div>
                 </div>
             </div>

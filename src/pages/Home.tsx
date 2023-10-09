@@ -1,8 +1,7 @@
-import Slide from "../components/Slide"
 import img1 from '../assets/SKYCASH.webp'
 import video from '../assets/VIDEO.mp4'
-import Offices from "../components/Offices"
 import Services from "../components/Services"
+import Slide from "../components/Slide"
 import Videos from "../components/Videos"
 
 const Home = () => {
@@ -23,14 +22,16 @@ const Home = () => {
                     ubicadas en Santo domingo, Punta Cana, Santiago y Constanza.
                 </p>
                 <p className="text-lg">
-                    Cada uno de nuestros clientes hace eco de la calidad de 
-                    nuestros servicios y respaldan nuestra labor que con amor y 
+                    Cada uno de nuestros clientes hace eco de la calidad de
+                    nuestros servicios y respaldan nuestra labor que con amor y
                     entrega disponemos cada día.
                 </p>
             </div>
-            <img className="w-full aspect-16/2" src={img1} alt="" />
+            <div className="relative flex flex-col items-center">
+                <img className="w-full aspect-16/2" src={img1} alt="" />
+                <a href="https://wa.me/8496338938" target="_blank" className={`absolute button-invisible bottom-1.26 hover:shadow-md hover:shadow-blue-500 duration-300 cursor-pointer`}></a>
+            </div>
             <Services />
-            <Offices />
             <video src={video} autoPlay loop muted controls className="w-full" />
             <Videos />
         </div>

@@ -8,7 +8,6 @@ const NavbarMenu = () => {
         <ul className="flex -mt-96 duration-300 flex-col fixed w-full text-white z-10 bgBlue items-center" id='menu'>
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('home', navigate)}>Inicio</button></li>
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about', navigate)}>Quienes Somos</button></li>
-            <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('offices', navigate)}>Sucursales</button></li>
             <li className="duration-300 hover:scale-110 "><Link to="/cita" onClick={scrollZero}>Crea una Cita</Link></li>
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('contact', navigate)}>Contacto</button></li>
         </ul>

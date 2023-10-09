@@ -19,7 +19,6 @@ const Navbar = () => {
                 <ul className="hidden md:flex gap-10 text-sm lg:text-lg">
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('home', navigate)}>Inicio</button></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about', navigate)}>Quienes Somos</button></li>
-                    <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('offices', navigate)}>Sucursales</button></li>
                     <li className="duration-300 hover:scale-110 "><Link to="/cita" onClick={scrollZero}>Crea una Cita</Link></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('contact', navigate)}>Contacto</button></li>
                 </ul>
