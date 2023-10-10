@@ -4,6 +4,7 @@ import Services from "../components/Services"
 import Slide from "../components/Slide"
 import Recomendations from "../components/Recomendations"
 import blueLife from '../assets/BLUE LIFE.webp'
+import sponsors from '../assets/PATROCINADORESd.webp'
 
 const Home = () => {
     return (
@@ -31,8 +32,21 @@ const Home = () => {
             <Financing />
             <Services />
             <video src={video} autoPlay loop muted controls className="w-full" />
-            <div className='flex items-center flex-col'>
-                <img src={blueLife} className='w-6/12 aspect-square object-cover' alt="Blue Life" />
+            <div className='flex items-center flex-col py-24' id='blueLife'>
+                <img src={blueLife} className='md:w-5/12 h-80 object-cover' alt="Blue Life" />
+                <p className='px-5 md:px-48 text-lg text-justify pt-10'>
+                    BlueLifes es una iniciativa donde la comunidad de SKYDENTRD apoya de
+                    manera genuina el cuidado y preservación del medio ambiente a través de
+                    una limpieza de costas donde recogemos desperdicios sólidos arrojados por
+                    personas en lugares inapropiados como en las playas de República
+                    Dominicana. Nuestro planeta necesita que cada uno de nosotros cree
+                    conciencia de la importancia de mantener limpios los espacios donde
+                    distintas especies marinas viven y reducir así la muerte de cada una de ellas.
+                </p>
+            </div>
+            <div className='flex flex-col items-center py-10'>
+                <h2 className='text-2xl md:text-5xl textBlue font-bold'>Patrocinadores</h2>
+                <img className='aspect-40/15 h-96 object-cover' src={sponsors} alt="Patrocinadores" />
             </div>
             <Recomendations />
         </div>

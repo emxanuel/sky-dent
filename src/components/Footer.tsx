@@ -5,7 +5,7 @@ import { offices } from '../data/offices'
 const Footer = () => {
     return (
         <div className='flex justify-center flex-col items-center w-full py-10 gap-10' id='contact'>
-            <h2 className='text-center text-3xl py-10 font-bold textBlue'>Contáctanos</h2>
+            <h2 className='text-center text-2xl md:text-5xl py-10 font-bold textBlue'>Contáctanos</h2>
             <div className='flex justify-evenly w-full textBlue flex-col md:flex-row items-center md:items-start gap-10 md:gap-10 md:px-5 lg:gap-0 lg:px-0'>
                 {offices.map(o => (
                     <div className='w-10/12 md:w-56 text-lg' key={o.id}>
