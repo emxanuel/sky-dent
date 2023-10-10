@@ -16,7 +16,7 @@ const Footer = () => {
                 ))}
             </div>
             <a href='https://instagram.com/skydentrd' className='flex gap-3 items-center text-lg hover:text-neutral-500'>
-                <FontAwesomeIcon icon={faInstagram} className='bgBlue text-white p-2 rounded-full hover:bg-neutral-500 duration-200' />
+                <FontAwesomeIcon icon={faInstagram} className='bgBlue text-white p-2 aspect-square rounded-full hover:bg-neutral-500 duration-200' />
                 <span className='textBlue font-bold hover:text-neutral-500 duration-200'>skydentrd</span>
             </a>
         </div>
