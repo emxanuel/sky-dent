@@ -1,14 +1,13 @@
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import img1 from '../assets/1.webp'
 import img2 from '../assets/2.webp'
 import img3 from '../assets/3.webp'
-import img4 from '../assets/4.webp'
 import img5 from '../assets/5.webp'
 import img6 from '../assets/6.webp'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const images = [
     {
@@ -22,10 +21,6 @@ const images = [
     {
         id: 3,
         img: img3
-    },
-    {
-        id: 4,
-        img: img4
     },
     {
         id: 5,
