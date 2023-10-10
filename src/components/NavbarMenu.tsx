@@ -6,7 +6,7 @@ import { toggleShowElement } from '../functions/elements'
 const NavbarMenu = () => {
     const navigate = useNavigate()
     return (
-        <ul className="flex -mt-96 duration-300 flex-col fixed w-full text-white z-10 bgBlue items-center" id='menu' onClick={() => {
+        <ul className="flex -mt-96 duration-300 flex-col fixed w-full text-white z-10 bgBlue items-center text-lg gap-2" id='menu' onClick={() => {
             const element = document.getElementById('menu') as HTMLElement
             toggleShowElement(element)
         }}>
