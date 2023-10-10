@@ -6,8 +6,9 @@ interface Service {
 
 interface Office{
     id: number,
-    location: string,
-    phone: string
+    name: string,
+    phone: string,
+    location: string
 }
 
 export type { Service, Office };

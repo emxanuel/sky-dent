@@ -1,8 +1,9 @@
-import img1 from '../assets/SKYCASH.webp'
 import video from '../assets/VIDEO.mp4'
+import Financing from '../components/Financing'
 import Services from "../components/Services"
 import Slide from "../components/Slide"
-import Videos from "../components/Videos"
+import Recomendations from "../components/Recomendations"
+import blueLife from '../assets/BLUE LIFE.webp'
 
 const Home = () => {
     return (
@@ -27,13 +28,13 @@ const Home = () => {
                     entrega disponemos cada día.
                 </p>
             </div>
-            <div className="relative flex flex-col items-center">
-                <img className="w-full aspect-16/2" src={img1} alt="" />
-                <a href="https://wa.me/8496338938" target="_blank" className={`absolute button-invisible bottom-1.26 hover:shadow-md hover:shadow-blue-500 duration-300 cursor-pointer`}></a>
-            </div>
+            <Financing />
             <Services />
             <video src={video} autoPlay loop muted controls className="w-full" />
-            <Videos />
+            <div className='flex items-center flex-col'>
+                <img src={blueLife} className='w-6/12 aspect-square object-cover' alt="Blue Life" />
+            </div>
+            <Recomendations />
         </div>
     )
 }

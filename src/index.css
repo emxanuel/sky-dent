@@ -6,6 +6,18 @@
   font-family: century-gothic, sans-serif ;
 }
 
+@font-face {
+  font-family: 'benedict-regular';
+  src: url('./assets/fonts/benedict_regular-webfont.woff'),
+        url('assets/fonts/benedict_regular-webfont.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-benedict{
+  font-family: 'benedict-regular', sans-serif;
+}
+
 .bgBlue{
   background-color: #0c4e9c;
 }

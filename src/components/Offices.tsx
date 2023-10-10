@@ -14,7 +14,7 @@ const Offices: React.FC<Props> = ({ gap, footer }) => {
                 <Fade triggerOnce key={o.id} delay={parseInt(`${o.id * 100}`)}>
                     <div className="flex flex-col items-center">
                         <img className={`select-none w-12 md:w-16 ${footer ? 'w-12 md:w-16' : ''}`} src={pin} alt="" />
-                        <h2 className={`textBlue font-bold text-2xl md:text-3xl ${footer ? 'text-xs md:text-3xl' : ''}`}>{o.location}</h2>
+                        <h2 className={`textBlue font-bold text-2xl md:text-3xl ${footer ? 'text-xs md:text-3xl' : ''}`}>{o.name}</h2>
                         <p className={`textBlue text-xl md:text-2xl ${footer ? 'text-xs md:text-2xl' : ''}`}>{o.phone}</p>
                     </div>
                 </Fade>

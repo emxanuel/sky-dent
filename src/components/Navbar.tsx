@@ -15,9 +15,9 @@ const Navbar = () => {
             <nav className="flex justify-between px-3 bgBlue text-white py-5 w-full items-center fixed z-20 md:shadow-lg shadow-current h-24 top-0">
                 <div className="flex items-center">
                     <img className='w-32 lg:w-48' src={logo} alt=""/>
-                </div>
+                </div> 
                 <ul className="hidden md:flex gap-10 text-sm lg:text-lg">
-                    <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('home', navigate)}>Inicio</button></li>
+                    <li className="duration-300 hover:scale-110"><button onClick={() => scrollElement('home', navigate)}>Inicio</button></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about', navigate)}>Quienes Somos</button></li>
                     <li className="duration-300 hover:scale-110 "><Link to="/cita" onClick={scrollZero}>Crea una Cita</Link></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('contact', navigate)}>Contacto</button></li>
