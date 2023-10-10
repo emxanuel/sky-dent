@@ -32,8 +32,8 @@ const Home = () => {
             <Financing />
             <Services />
             <video src={video} autoPlay loop muted controls className="w-full" />
-            <div className='flex items-center flex-col py-24' id='blueLife'>
-                <img src={blueLife} className='md:w-5/12 h-80 object-cover' alt="Blue Life" />
+            <div className='flex items-center flex-col pt-10' id='blueLife'>
+                <img src={blueLife} className='md:w-5/12 aspect-2/1 md:aspect-square md:h-80 object-cover' alt="Blue Life" />
                 <p className='px-5 md:px-48 text-lg text-justify pt-10'>
                     BlueLifes es una iniciativa donde la comunidad de SKYDENTRD apoya de
                     manera genuina el cuidado y preservación del medio ambiente a través de
@@ -44,9 +44,9 @@ const Home = () => {
                     distintas especies marinas viven y reducir así la muerte de cada una de ellas.
                 </p>
             </div>
-            <div className='flex flex-col items-center py-10'>
+            <div className='flex flex-col items-center pt-10'>
                 <h2 className='text-2xl md:text-5xl textBlue font-bold'>Patrocinadores</h2>
-                <img className='aspect-40/15 h-96 object-cover' src={sponsors} alt="Patrocinadores" />
+                <img className='aspect-40/15 md:h-96 object-cover' src={sponsors} alt="Patrocinadores" />
             </div>
             <Recomendations />
         </div>
