@@ -35,7 +35,7 @@ const Home = () => {
             <div className='flex items-center flex-col pt-10' id='blueLife'>
                 <img src={blueLife} className='md:w-5/12 aspect-2/1 md:aspect-square md:h-80 object-cover' alt="Blue Life" />
                 <p className='px-5 md:px-48 text-lg text-justify pt-10'>
-                    BlueLifes es una iniciativa donde la comunidad de SKYDENTRD apoya de
+                    BlueLife es una iniciativa donde la comunidad de SKYDENTRD apoya de
                     manera genuina el cuidado y preservación del medio ambiente a través de
                     una limpieza de costas donde recogemos desperdicios sólidos arrojados por
                     personas en lugares inapropiados como en las playas de República
