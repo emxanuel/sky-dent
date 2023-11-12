@@ -8,6 +8,8 @@ import img2 from '../assets/2.webp'
 import img3 from '../assets/3.webp'
 import img5 from '../assets/5.webp'
 import img6 from '../assets/6.webp'
+import { useNavigate } from 'react-router-dom'
+import { scrollElement } from '../functions/elements'
 
 const images = [
     {
@@ -33,17 +35,9 @@ const images = [
 ]
 
 const Slide = () => {
+    const navigate = useNavigate()
     return (
-        <div id="home" className="relative">
-            <div className='w-full h-full z-10 bg-black absolute bg-opacity-40 text-white flex flex-col p-10'>
-                <h2 className='text-6xl'>Sky Dent</h2>
-                <h3 className='text-3xl mt-10'>Beneficios de atenderse con nosotros</h3>
-                <ul className='text-2xl ml-6 mt-5'>
-                    <li>Beneficio 1</li>
-                    <li>Beneficio 2</li>
-                    <li>Beneficio 3</li>
-                </ul>
-            </div>
+        <div id="home" className="relative flex flex-col">
             <Swiper
                 modules={[Autoplay]}
                 slidesPerView={1}
@@ -60,6 +54,16 @@ const Slide = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className='w-full h-full z-10 md:bg-black md:absolute md:bg-opacity-40 md:text-white flex flex-col p-10 border-b-2 border-gray-700'>
+                <h2 className='md:text-6xl text-3xl '>Sky Dent</h2>
+                <h3 className='md:text-3xl md:mt-10 text-lg font-semibold mt-5'>Beneficios de atenderse con nosotros:</h3>
+                <ul className='md:text-2xl md:ml-6 md:mt-5 mt-4 ml-3'>
+                    <li>Beneficio 1</li>
+                    <li>Beneficio 2</li>
+                    <li>Beneficio 3</li>
+                </ul>
+                <button className='bg-[#0c4e9c] text-white mt-10 py-[5px] w-fit self-center px-4 rounded-md hover:scale-110 text-lg duration-200 md:bottom-5 md:absolute md:text-xl' onClick={() => scrollElement('services', navigate)}>Nuestros servicios</button>
+            </div>
         </div>
     )
 }

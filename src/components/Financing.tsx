@@ -9,7 +9,7 @@ const Financing = () => {
                     <span className="font-benedict font-normal text-5xl h-8 text-neutral-500">CASH</span>
                 </span>
             </p>
-            <a href="https://wa.me/8496338938" target="_blank" className="bgBlue text-white uppercase px-2 py-1 rounded-full text-base hover:scale-105 duration-200">
+            <a href="https://wa.me/8496338938" target="_blank" className="bgBlue text-white uppercase px-2 py-1 rounded-md text-base hover:scale-110 duration-200">
                 Conoce más
             </a>
         </div>
