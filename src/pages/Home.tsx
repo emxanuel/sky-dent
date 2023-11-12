@@ -54,7 +54,7 @@ const Home = () => {
                 <img className='aspect-40/15 md:h-96 object-cover' src={sponsors} alt="Patrocinadores" />
             </div>
             <Recomendations />
-            <div className='fixed right-2 bottom-2 flex flex-col gap-5'>
+            <div className='fixed right-2 bottom-2 flex flex-col gap-5 z-20'>
                 <div className={`bg-white border rounded-lg border-[#0c4e9c] ${openWs? 'flex' : 'hidden'} p-5 flex-col items-center`}>
                     <h2 className='text-lg border-b'>Sky Dent</h2>
                     <p className='w-52'>
