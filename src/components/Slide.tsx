@@ -35,7 +35,9 @@ const images = [
 const Slide = () => {
     return (
         <div id="home" className="relative">
-            
+            <div className='w-full h-full z-10 bg-black absolute bg-opacity-40 text-white flex flex-col p-10'>
+                <h2 className='text-6xl'>Sky Dent</h2>
+            </div>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}
