@@ -37,6 +37,12 @@ const Slide = () => {
         <div id="home" className="relative">
             <div className='w-full h-full z-10 bg-black absolute bg-opacity-40 text-white flex flex-col p-10'>
                 <h2 className='text-6xl'>Sky Dent</h2>
+                <h3 className='text-3xl mt-10'>Beneficios de atenderse con nosotros</h3>
+                <ul>
+                    <li>Beneficio 1</li>
+                    <li>Beneficio 2</li>
+                    <li>Beneficio 3</li>
+                </ul>
             </div>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
