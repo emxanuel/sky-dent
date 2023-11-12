@@ -1,7 +1,7 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import img1 from '../assets/1.webp'
 import img2 from '../assets/2.webp'
@@ -38,17 +38,15 @@ const Slide = () => {
             <div className='w-full h-full z-10 bg-black absolute bg-opacity-40 text-white flex flex-col p-10'>
                 <h2 className='text-6xl'>Sky Dent</h2>
                 <h3 className='text-3xl mt-10'>Beneficios de atenderse con nosotros</h3>
-                <ul>
+                <ul className='text-2xl ml-6 mt-5'>
                     <li>Beneficio 1</li>
                     <li>Beneficio 2</li>
                     <li>Beneficio 3</li>
                 </ul>
             </div>
             <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Autoplay]}
                 slidesPerView={1}
-                pagination={{clickable: true, dynamicBullets: true}}
-                navigation
                 centeredSlides
                 autoplay={{delay: 5000, disableOnInteraction: false}}
                 loop
