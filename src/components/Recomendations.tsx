@@ -48,7 +48,7 @@ const Recomendations = () => {
     return (
         <div className='flex flex-col'>
             <h2 className='textBlue text-center text-2xl font-bold py-5 border-b-2 md:text-5xl md:py-10'>Recomendaciones</h2>
-            <div className='flex flex-col md:grid md:grid-cols-4'>
+            <div className='flex flex-col md:grid md:grid-cols-4 gap-3'>
                 {videos.map((v) => (
                     <div className='' key={v.id}>
                         <video className='' controls src={v.path} />
