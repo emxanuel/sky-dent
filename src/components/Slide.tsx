@@ -8,8 +8,6 @@ import img2 from '../assets/2.webp'
 import img3 from '../assets/3.webp'
 import img5 from '../assets/5.webp'
 import img6 from '../assets/6.webp'
-import { useNavigate } from 'react-router-dom'
-import { scrollElement } from '../functions/elements'
 
 const images = [
     {
@@ -35,7 +33,6 @@ const images = [
 ]
 
 const Slide = () => {
-    const navigate = useNavigate()
     return (
         <div id="home" className="relative flex flex-col">
             <Swiper
