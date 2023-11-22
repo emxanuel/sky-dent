@@ -1,0 +1,433 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Crea tu cita - SKYDENT RD">
+    <div class="">
+        <form
+            class="relative py-10 md:mx-40 lg:px-20 px-4 md:px-10 border rounded-md flex flex-col"
+        >
+            <div class="flex flex-col">
+                <label class="font-bold border-b">Datos del paciente</label>
+                <div class="flex flex-col py-4">
+                    <div class="flex flex-col gap-3">
+                        <label class="font-bold">Tipo de paciente</label>
+                        <div class="flex gap-2 md:gap-10 md:flex-row flex-col">
+                            <div class="flex items-center gap-2">
+                                <input
+                                    type="radio"
+                                    name="patientType"
+                                    value={"Personal"}
+                                />
+                                <label>Personal</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input
+                                    type="radio"
+                                    name="patientType"
+                                    value={"Dependiente menor de edad"}
+                                />
+                                <label>Dependiente menor de edad</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input
+                                    type="radio"
+                                    name="patientType"
+                                    value={"Extranjero"}
+                                />
+                                <label>Extranjero</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <label class="font-bold">Tipo de cita</label>
+                        <div class="flex gap-10">
+                            <div class="flex gap-2">
+                                <input
+                                    type="radio"
+                                    name="appointmentType"
+                                    value={"Consulta inicial"}
+                                />
+                                <label>Consulta inicial</label>
+                            </div>
+                            <div class="flex gap-2">
+                                <input
+                                    type="radio"
+                                    name="appointmentType"
+                                    value={"Profilaxis"}
+                                />
+                                <label>Profilaxis</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 py-4">
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Cedula"
+                            name="cedula"
+                        />
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Nombre"
+                            name="firstName"
+                        />
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Apellido"
+                            name="lastName"
+                        />
+                    </div>
+                    <div class="flex gap-10 py-4">
+                        <div class="flex gap-2">
+                            <input
+                                name="gender"
+                                value={"Masculino"}
+                                type="radio"
+                            />
+                            <label>Masculino</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                name="gender"
+                                value={"Femenino"}
+                                type="radio"
+                            />
+                            <label>Femenino</label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 py-4">
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Fecha Nacimiento"
+                            name="birthDate"
+                        />
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="E-mail"
+                            name="email"
+                        />
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Telefono"
+                            name="phone"
+                        />
+                        <input
+                            class="border p-2"
+                            type="text"
+                            placeholder="Celular"
+                            name="cellPhone"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="py-4 flex flex-col">
+                <label class="font-bold border-b">Cuestionario</label>
+                <div class="py-4">
+                    <label class="font-bold"
+                        >Esta usted embarazada o cree estarlo?</label
+                    >
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input type="radio" name="isPregnant" />
+                            <label for="is-pregnant">Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="radio" name="isPregnant" />
+                            <label for="is-pregnant">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold">
+                        Usted o alguien con quien haya estado en contacto
+                        cercano ha viajado al extranjero en los ultimos 14 dias?
+                    </label>
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="contactForeign"
+                                id=""
+                                value={"Si"}
+                            />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="contactForeign"
+                                id=""
+                                value={"No"}
+                            />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold">
+                        Ha estado en contacto con alguien a quien le ha
+                        diagnosticado COVID-19 o que ha estado en cuarentena
+                        como medida de precaucion en los ultimos 14 dias
+                    </label>
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="contactCovid"
+                                id=""
+                                value={"Si"}
+                            />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="contactCovid"
+                                id=""
+                                value={"No"}
+                            />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold"
+                        >Ha tenido uno o varios de estos sintomas en los ultimos
+                        14 dias?</label
+                    >
+                    <div class="flex gap-2">
+                        <input
+                            type="checkbox"
+                            name="symptom"
+                            value={"Fiebre"}
+                        />
+                        <label>Fiebre</label>
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="checkbox" name="symptom" value={"Tos"} />
+                        <label>Tos</label>
+                    </div>
+                    <div class="flex gap-2">
+                        <input
+                            type="checkbox"
+                            name="symptom"
+                            value={"Falta de aire y cansancio"}
+                        />
+                        <label>Falta de aire y cansancio</label>
+                    </div>
+                    <div class="flex gap-2">
+                        <input
+                            type="checkbox"
+                            name="symptom"
+                            value={"Ninguna"}
+                        />
+                        <label>Ninguna</label>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold">
+                        Le han diagnosticado o esta esperando pruebas
+                        relacionadas con un diagnostico de sospecha de
+                        coronavirus?
+                    </label>
+                    <div class="flex gap-10">
+                        <div class="flex gap-2">
+                            <input type="radio" name="covid" value={"Si"} />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="radio" name="covid" value={"No"} />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold">Posee marcapaso cardiaco</label>
+                    <div class="flex gap-10">
+                        <div class="flex gap-2">
+                            <input type="radio" name="pacemaker" value={"Si"} />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="radio" name="pacemaker" value={"No"} />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold"
+                        >Cuando fue la ultima vez que fue al dentista</label
+                    >
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="lastTime"
+                                value={"Nunca"}
+                            />
+                            <label>Nunca</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="lastTime"
+                                value={"0 - 6 meses"}
+                            />
+                            <label>0 - 6 meses</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="lastTime"
+                                value={"6 meses - 1 año"}
+                            />
+                            <label>6 meses - 1 año</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="lastTime"
+                                value={"1 - 3 años"}
+                            />
+                            <label>1 - 3 años</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="lastTime"
+                                value={"Mas de 3 años"}
+                            />
+                            <label>Mas de 3 años</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold"
+                        >Le sangran las encias al cepillarse</label
+                    >
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="bleedBrushing"
+                                value={"Si"}
+                            />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="bleedBrushing"
+                                value={"No"}
+                            />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold"
+                        >Tiene movilidad en alguno de sus dientes_</label
+                    >
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="toothMovility"
+                                value={"Si"}
+                            />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="toothMovility"
+                                value={"No"}
+                            />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 flex flex-col">
+                    <label class="font-bold"
+                        >Ha sido tratado por un periodoncista antes?</label
+                    >
+                    <div class="flex flex-col">
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="periodoncistBefore"
+                                value={"Si"}
+                            />
+                            <label>Si</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input
+                                type="radio"
+                                name="periodoncistBefore"
+                                value={"No"}
+                            />
+                            <label>No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <label class="font-bold border-b">Datos de la cita</label>
+                <div class="flex flex-col">
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Clinica</label>
+                        <select name="clinic" id="" class="border p-2">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Especialidad</label>
+                        <select name="speciality" id="" class="border p-2">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Doctor</label>
+                        <select name="doctor" id="" class="border p-2">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Fecha de cita</label>
+                        <input
+                            name="appointmentDate"
+                            type="date"
+                            placeholder="fecha"
+                            class="border p-2"
+                        />
+                    </div>
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Hora</label>
+                        <select name="hour" id="" class="border p-2">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col py-4">
+                        <label class="font-bold">Nota</label>
+                        <textarea
+                            name="note"
+                            id=""
+                            class="border h-96 p-2 resize-none"
+                            placeholder="Comentario sobre la cita"></textarea>
+                    </div>
+                </div>
+            </div>
+            <input
+                type="submit"
+                class="bgBlue text-white p-3 rounded-md right-0"
+                value={"Enviar"}
+            />
+        </form>
+    </div>
+</Layout>

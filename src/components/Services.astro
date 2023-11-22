@@ -1,0 +1,37 @@
+---
+import { services } from "../data/services";
+import icon from '../assets/icon.webp'
+---
+
+<div id="services" class="bgBlue h-full py-14 text-white md:p-24">
+    <h2 class="text-center font-bold md:text-6xl pt-10 pb-20 text-4xl">
+        Nuestros Servicios
+    </h2>
+    <div
+        class="flex flex-col items-center gap-10 md:grid md:grid-cols-2 md:gap-11 lg:grid-cols-3 place-items-center"
+    >
+        {
+            services.map((s) => (
+                <div
+                    class={`flex flex-col items-center justify-start w-full gap-3 h-full`}
+                >
+                    <h3 class="font-bold text-2xl">{s.title}</h3>
+                    <ul class="md:list-disc flex flex-col items-center md:items-start gap-3 md:gap-0">
+                        {s.content.map((c) => (
+                            <li>
+                                <p class="text-lg">{c}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))
+        }
+        <img
+            class="lg:col-start-2 lg:w-36 self-center"
+            width={280}
+            height={280}
+            src={icon.src}
+            alt=""
+        />
+    </div>
+</div>

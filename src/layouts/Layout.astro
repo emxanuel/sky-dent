@@ -1,0 +1,29 @@
+---
+import Navbar from '../components/Navbar';
+interface props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+import '../components/GlobalStyles.astro'
+import '@iconify/tailwind'
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/src/assets/icon.webp" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="relative mt-24">
+        <Navbar client:load/>
+        <slot />
+        <Footer/>
+    </body>
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+</html>
+
