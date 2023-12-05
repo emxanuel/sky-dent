@@ -1,8 +1,9 @@
+import { useEffect } from 'react'
 import { products } from '../data/products'
-import { carContext as car } from '../shopCarContext'
+import { addProduct } from '../ShopCarContext'
+
 
 const Products = () => {
-    console.log(car.content)
     return (
         <div className='flex flex-wrap gap-3 items-center justify-center'>
             {products.map((product) => (
@@ -16,8 +17,7 @@ const Products = () => {
                     <p>{product.price}</p>
                     <button
                         onClick={() => {
-                            car.add(product)
-                            alert('agregado al carrito')
+                            addProduct(product)
                         }}
                         className='bg-blue-500 text-white rounded-md px-6 py-1'
                     >Agregar al carrito</button>

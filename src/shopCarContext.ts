@@ -1,19 +1,13 @@
-import type { TProduct } from './types';
+import {atom} from 'nanostores'
+import type {TProduct}  from './types';
 
-export type TCar = TProduct[]
+export const $car = atom<TProduct[]>([])
 
-class ClassCarContext {
-    content: TCar
-    add: (product: TProduct) => void
-    remove: (product: TProduct) => void
-    constructor(){
-        this.content = []
-        this.add = (product: TProduct) => {this.content.push(product)}
-        this.remove = (product: TProduct) => {this.content.filter(p => p !== product)}
-    }
-
+export function addProduct(product: TProduct){
+    $car.set([...$car.get(), product])
+    localStorage.setItem('car', JSON.stringify($car.get()))
 }
 
-const carContext = new ClassCarContext()
-
-export { carContext }
+export function removeProduct (index: number){
+    $car.set($car.get().splice(index, 1))
+}

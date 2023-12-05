@@ -1,31 +1,44 @@
-import {useState} from 'react'
-import { carContext as car } from '../shopCarContext'
+import { useEffect, useState } from 'react'
+import type { TProduct } from '../types'
 
 const Shop = () => {
-    const [amount, setAmount] = useState(0)
-    console.log(car.content)
-    return (
-        <div>
-            <div className="py-32 w-full flex flex-col">
-            {
-                car.content.map((product, index) => (
-                    <div className="flex  justify-around items-center">
-                        <p>{index + 1}</p>
-                        <img
-                            src={product.imageUrl}
-                            alt={product.name}
-                            className ="w-52 aspect-square flex justify-center items-center h-full border border-current"
-                        />
+    const [car, setCar] = useState<TProduct[]>([])
+    const storedCar = localStorage.getItem('car')
 
-                        <p>{product.name}</p>
-                        <p>${product.price}</p>
-                    </div>
-                ))
-            }
-            <div className="flex w-full items-end justify-end">
-                <p className  ="text-lg font-bold px-20">Total: ${amount}</p>
+    const [amount, setAmount] = useState(0)
+    useEffect(() => {
+        setCar(JSON.parse(storedCar? storedCar : '[]') as TProduct[])
+    }, [localStorage])
+
+    useEffect(() => {
+        setAmount(0)
+        car.map((product) => {
+            setAmount(prev => prev += product.price)
+        })
+    }, [car])
+    console.log(car)
+    return (
+        <div className='flex w-full'>
+            <div className="py-32 w-full flex flex-col gap-5">
+                {
+                    car.map((product, index) => (
+                        <div className="flex  justify-around items-center" key={index}>
+                            <p>{index + 1}</p>
+                            <img
+                                src={product.imageUrl}
+                                alt={product.name}
+                                className="w-52 aspect-square flex justify-center items-center h-full border border-current"
+                            />
+
+                            <p>{product.name}</p>
+                            <p>${product.price}</p>
+                        </div>
+                    ))
+                }
+                <div className="flex w-full items-end justify-end">
+                    <p className="text-lg font-bold px-20">Total: ${amount}</p>
+                </div>
             </div>
-        </div>
         </div>
     )
 }
