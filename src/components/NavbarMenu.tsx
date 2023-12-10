@@ -9,6 +9,7 @@ const NavbarMenu = () => {
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about')}>Quienes Somos</button></li>
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('blueLife')}>Resp. Soc.</button></li>
             <li className="duration-300 hover:scale-110 "><a href="/cita" onClick={scrollZero}>Crea una Cita</a></li>
+            <li className="duration-300 hover:scale-110 "><a href="/carrito" onClick={scrollZero}>Carrito</a></li>
             <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('contact')}>Contacto</button></li>
         </ul>
     )
