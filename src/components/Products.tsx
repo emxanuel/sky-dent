@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { products } from '../data/products'
 import { addProduct } from '../ShopCarContext'
 
