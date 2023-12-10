@@ -10,7 +10,6 @@ const response = await Astro.request.formData();
 // RetrivalReferenceNumber: string
 // CreditCardNumber: string
 // TxToken: string
-console.log(response)
 const object: any = {};
 for (const [key, value] of response.entries()) {
     object[key] = value;
