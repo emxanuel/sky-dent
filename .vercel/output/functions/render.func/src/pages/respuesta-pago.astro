@@ -1,0 +1,202 @@
+---
+import Layout from "../layouts/Layout.astro";
+const response = await Astro.request.formData();
+// ResponseCode: string
+// OrdenID: string
+// TransactionID: string
+// TransactionId: string
+// RemoteResponseCode: string
+// AuthorizationCode: string
+// RetrivalReferenceNumber: string
+// CreditCardNumber: string
+// TxToken: string
+console.log(response)
+const object: any = {};
+for (const [key, value] of response.entries()) {
+    object[key] = value;
+}
+let message: string;
+const code = object.ResponseCode;
+message =
+    code === "00"
+        ? "Aprobada"
+        : code === "01"
+        ? "Llamar al Banco"
+        : code === "02"
+        ? "Llamar al Banco"
+        : code === "03"
+        ? "Comercio Invalido"
+        : code === "04"
+        ? "Rechazada"
+        : code === "05"
+        ? "Rechazada"
+        : code === "06"
+        ? "Error en Mensaje"
+        : code === "07"
+        ? "Tarjeta Rechazada"
+        : code === "08"
+        ? "Llamar al Banco"
+        : code === "09"
+        ? "Request in progress"
+        : code === "10"
+        ? "Aprobación Parcial"
+        : code === "11"
+        ? "Approved VIP"
+        : code === "12"
+        ? "Transacción Invalida"
+        : code === "13"
+        ? "Monto Invalido"
+        : code === "14"
+        ? "Cuenta Invalida"
+        : code === "15"
+        ? "No such issuer"
+        : code === "16"
+        ? "Approved update track 3"
+        : code === "17"
+        ? "Customer cancellation"
+        : code === "18"
+        ? "Customer dispute"
+        : code === "19"
+        ? "Reintentar Transacción"
+        : code === "20"
+        ? "No tomo acción"
+        : code === "21"
+        ? "No tomo acción"
+        : code === "22"
+        ? "Transacción No Aprobada"
+        : code === "23"
+        ? "Transacción No Aceptada"
+        : code === "24"
+        ? "File update not supported"
+        : code === "25"
+        ? "Unable to locate record"
+        : code === "26"
+        ? "Duplicate record"
+        : code === "27"
+        ? "File update edit error"
+        : code === "28"
+        ? "File update file locked"
+        : code === "30"
+        ? "File update failed"
+        : code === "31"
+        ? "Bin no soportado"
+        : code === "32"
+        ? "Tx. Completada Parcialmente"
+        : code === "33"
+        ? "Tarjeta Expirada"
+        : code === "34"
+        ? "Transacción No Aprobada"
+        : code === "35"
+        ? "Transacción No Aprobada"
+        : code === "36"
+        ? "Transacción No Aprobada"
+        : code === "37"
+        ? "Transacción No Aprobada"
+        : code === "38"
+        ? "Transacción No Aprobada"
+        : code === "39"
+        ? "Tarjeta Invalida"
+        : code === "40"
+        ? "Función no Soportada"
+        : code === "41"
+        ? "Transacción No Aprobada"
+        : code === "42"
+        ? "Cuenta Invalida"
+        : code === "43"
+        ? "Transacción No Aprobada"
+        : code === "44"
+        ? "No investment account"
+        : code === "51"
+        ? "Fondos insuficientes"
+        : code === "52"
+        ? "Cuenta Invalidad"
+        : code === "53"
+        ? "Cuenta Invalidad"
+        : code === "54"
+        ? "Tarjeta vencida"
+        : code === "56"
+        ? "Cuenta Invalidad"
+        : code === "57"
+        ? "Transacción no permitida"
+        : code === "58"
+        ? "Transacción no permitida en terminal"
+        : code === "60"
+        ? "Contactar Adquirente"
+        : code === "61"
+        ? "Excedió Limte de Retiro"
+        : code === "62"
+        ? "Tarjeta Restringida"
+        : code === "65"
+        ? "Excedió Cantidad de Intento"
+        : code === "66"
+        ? "Contactar Adquirente"
+        : code === "67"
+        ? "Hard capture"
+        : code === "68"
+        ? "Response received too late"
+        : code === "75"
+        ? "Pin excedio Limte de Intentos"
+        : code === "77"
+        ? "Captura de Lote Invalida"
+        : code === "78"
+        ? "Intervención del Banco Requerida"
+        : code === "79"
+        ? "Rechazada"
+        : code === "81"
+        ? "Pin invalido"
+        : code === "82"
+        ? "PIN Required"
+        : code === "85"
+        ? "Llaves no disponibles"
+        : code === "89"
+        ? "Terminal Invalida"
+        : code === "90"
+        ? "Cierre en proceso"
+        : code === "91"
+        ? "Host No Disponible"
+        : code === "92"
+        ? "Error de Ruteo"
+        : code === "94"
+        ? "Duplicate Transaction"
+        : code === "95"
+        ? "Error de Reconciliación"
+        : code === "96"
+        ? "Error de Sistema"
+        : code === "97"
+        ? "Emisor no Disponible"
+        : code === "98"
+        ? "Excede Limete de Efectivo"
+        : code === "99"
+        ? "CVV or CVC Error response"
+        : code === "TF"
+        ? "Solicitud de autenticación rechazada o no completada."
+        : "Código no reconocido";
+---
+
+<Layout title='Pago realizado | SKYDENT RD'>
+    <div class='flex md:flex-row items-center justify-around py-10'>
+        <div class="hidden md:flex">
+            <img
+                src="https://cdn.pixabay.com/photo/2016/09/14/20/50/tooth-1670434_1280.png"
+                alt="compra-skydent"
+                width="420"
+            />
+        </div>
+        <div class="flex flex-col items-center gap-10 py-10">
+            <h3 class="text-4xl text-center">
+                <span class="text-blue-700">Gracias</span> por preferirnos!
+            </h3>
+            <h2 class="text-3xl font-bold text-center">
+                Transacción completada
+            </h2>
+            <p class="text-center text-xl">
+                Mensaje: <span class="font-bold">{message}</span>
+            </p>
+            <a
+                href="/"
+                class="text-center flex justify-center text-blue-500 hover:text-black duration-200"
+                >Seguir navegando en la pagina</a
+            >
+        </div>
+    </div>
+</Layout>
