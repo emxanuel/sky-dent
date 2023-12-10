@@ -1,5 +1,5 @@
 import { products } from '../data/products'
-import { addProduct } from '../ShopCarContext'
+import { addProduct } from '../ShopCarContext.ts'
 
 
 const Products = () => {
