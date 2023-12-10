@@ -5,12 +5,13 @@ const { title } = Astro.props;
 import '../components/GlobalStyles.astro'
 import '@iconify/tailwind'
 import Footer from '../components/Footer.astro';
+import icon from '../assets/icon.webp'
 ---
 
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/src/assets/icon.webp" />
+        <link rel="icon" type="image/svg+xml" href={icon.src} />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
