@@ -27,16 +27,16 @@ const Shop = () => {
                             <img
                                 src={product.imageUrl}
                                 alt={product.name}
-                                className="w-52 aspect-square flex justify-center items-center h-full border border-current"
+                                className="w-52 aspect-square flex justify-center items-center h-full"
                             />
 
-                            <p>{product.name}</p>
-                            <p>${product.price}</p>
+                            <p className='w-4/12'>{product.name}</p>
+                            <p>RD${product.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                         </div>
                     ))
                 }
                 <div className="flex w-full items-end justify-end">
-                    <p className="text-lg font-bold px-20">Total: ${amount}</p>
+                    <p className="text-lg font-bold px-20">Total: RD${amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                 </div>
             </div>
         </div>
