@@ -1,13 +1,16 @@
 import {atom} from 'nanostores'
 import type {TProduct}  from './types';
+import {persistentAtom} from '@nanostores/persistent'
 
-export const $car = atom<TProduct[]>([])
+export const $car = persistentAtom<TProduct[]>('car', [], {
+    encode: JSON.stringify,
+    decode: JSON.parse
+})
 
 export function addProduct(product: TProduct){
     $car.set([...$car.get(), product])
-    localStorage.setItem('car', JSON.stringify($car.get()))
 }
 
-export function removeProduct (index: number){
-    $car.set($car.get().splice(index, 1))
+export function removeProduct(index: number) {
+    $car.set($car.get().filter((_, i) => i !== index));
 }

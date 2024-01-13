@@ -1,28 +1,11 @@
-import type { TProduct } from "../types";
-import { useState, useEffect } from "react";
-const storedCar = localStorage.getItem('car')
-const car = JSON.parse(storedCar ? storedCar : '[]') as TProduct[]
-
-let amount = 0
-car.map((product) => {
-    amount += product.price
-})
+import { useStore } from "@nanostores/react"
+import { $car } from "../shopCarContext"
 
 const Pay = () => {
-    const [car, setCar] = useState<TProduct[]>([])
-    const storedCar = localStorage.getItem('car')
+    
+    const $cart = useStore($car)
+    const amount = $cart.reduce((prev, current) => prev + current.price, 0)
 
-    const [amount, setAmount] = useState(0)
-    useEffect(() => {
-        setCar(JSON.parse(storedCar? storedCar : '[]') as TProduct[])
-    }, [localStorage])
-
-    useEffect(() => {
-        setAmount(0)
-        car.map((product) => {
-            setAmount(prev => prev += product.price)
-        })
-    }, [car])
     return (
         <form action="https://lab.cardnet.com.do/authorize" method="post">
             <input name="TransactionType" value="0200" type="hidden" />
@@ -60,7 +43,7 @@ const Pay = () => {
             <input name="loteid" value="001" type="hidden" />
             <input name="seqid" value="001" type="hidden" />
             <input
-                className="bg-blue-500 text-white rounded-md px-6 py-1"
+                className="bg-blue-500 text-white rounded-md px-6 py-1 text-2xl hover:cursor-pointer"
                 type="submit"
                 value="Pagar"
             />

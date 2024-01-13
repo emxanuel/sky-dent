@@ -1,38 +1,36 @@
 import { useEffect, useState } from 'react'
 import type { TProduct } from '../types'
+import { useStore } from '@nanostores/react'
+import { $car, removeProduct } from '../shopCarContext'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import CartItem from './CartItem'
 
 const Shop = () => {
-    const [car, setCar] = useState<TProduct[]>([])
-    const storedCar = localStorage.getItem('car')
-
-    const [amount, setAmount] = useState(0)
-    useEffect(() => {
-        setCar(JSON.parse(storedCar? storedCar : '[]') as TProduct[])
-    }, [localStorage])
+    const $cart = useStore($car)
+    const [deleteProduct, setDeleteProduct] = useState(false)
+    const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        setAmount(0)
-        car.map((product) => {
-            setAmount(prev => prev += product.price)
-        })
-    }, [car])
-    console.log(car)
+        setTimeout(() => {
+            setDeleteProduct(false)
+        }, 300)
+
+    }, [deleteProduct])
+
+
+    const amount = $cart.reduce((prev, current) => prev + current.price, 0)
     return (
         <div className='flex w-full'>
-            <div className="py-32 w-full flex flex-col gap-5">
+            <div className="py-10 md:py-32 w-full flex flex-col gap-5">
                 {
-                    car.map((product, index) => (
-                        <div className="flex  justify-around items-center" key={index}>
-                            <p>{index + 1}</p>
-                            <img
-                                src={product.imageUrl}
-                                alt={product.name}
-                                className="w-52 aspect-square flex justify-center items-center h-full"
-                            />
-
-                            <p className='w-4/12'>{product.name}</p>
-                            <p>RD${product.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
-                        </div>
+                    $cart.map((product, index) => (
+                        <CartItem 
+                            product={product}
+                            index={index}
+                            key={index}
+                            removeProduct={removeProduct}
+                            setDeleteProduct={setDeleteProduct}
+                        />
                     ))
                 }
                 <div className="flex w-full items-end justify-end">

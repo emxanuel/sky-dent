@@ -17,7 +17,7 @@ import icon from '../assets/icon.webp'
         <title>{title}</title>
     </head>
     <body class="relative mt-24">
-        <Navbar client:load/>
+        <Navbar client:only/>
         <slot />
         <Footer/>
     </body>
