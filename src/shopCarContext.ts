@@ -14,3 +14,7 @@ export function addProduct(product: TProduct){
 export function removeProduct(index: number) {
     $car.set($car.get().filter((_, i) => i !== index));
 }
+
+export function clearCart(){
+    $car.set([])
+}

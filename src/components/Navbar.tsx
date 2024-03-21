@@ -18,7 +18,7 @@ const Navbar = () => {
                     <li className="duration-300 hover:scale-110"><button onClick={() => scrollElement('home')}>Inicio</button></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('about')}>Quienes Somos</button></li>
                     <li className="duration-300 hover:scale-110 "><button onClick={() => scrollElement('blueLife')}>Resp. Soc.</button></li>
-                    <li className="duration-300 hover:scale-110 "><a href="/cita" onClick={scrollZero}>Crea una Cita</a></li>
+                    {/* <li className="duration-300 hover:scale-110 "><a href="/cita" onClick={scrollZero}>Crea una Cita</a></li> */}
                     <div className='relative duration-300 hover:scale-110 '>
                         <li className=""><a href="/carrito" onClick={scrollZero}>Carrito</a></li>
                         <span className='absolute -bottom-2 -right-1 bg-red-500 rounded-full text-white px-1 text-xs'>{$cart.length}</span>
