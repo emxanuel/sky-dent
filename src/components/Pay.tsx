@@ -47,7 +47,7 @@ const Pay = () => {
             <input name="Tax" value="00000000" type="hidden" />
             <input
                 name="MerchantName"
-                value="SKYDENT DO"
+                value="SKYDENTRD DO"
                 type="hidden"
             />
             <input
