@@ -27,9 +27,9 @@ const Pay = () => {
             <input name="TransactionType" value="0200" type="hidden" />
             <input name="CurrencyCode" value="214" type="hidden" />
             <input name="AcquiringInstitutionCode" value="349" type="hidden" />
-            <input name="MerchantType" value="821" type="hidden" />
+            <input name="MerchantType" value="8021" type="hidden" />
             <input name="MerchantNumber" value="349119772" type="hidden" />
-            <input name="MerchantTerminal" value="00813218" type="hidden" />
+            <input name="MerchantTerminal" value="00004419" type="hidden" />
             <input
                 name="ReturnUrl"
                 value={`${window.location.origin}/respuesta-pago`}
@@ -47,7 +47,7 @@ const Pay = () => {
             <input name="Tax" value="00000000" type="hidden" />
             <input
                 name="MerchantName"
-                value="SKYDENTRD DO"
+                value="SKY DENT RD SANTO DOMINGO DO"
                 type="hidden"
             />
             <input
